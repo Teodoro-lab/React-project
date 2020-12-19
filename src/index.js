@@ -3,56 +3,28 @@ import ReactDom from "react-dom";
 
 //CSS
 import './index.css'
+import {books} from './data/booksData'
+import Book from './components/Book'
+import Navbar from './components/Navbar'
 
-const books = [
-  {
-    id: 1,
-    author: "Charlie Mackesy",
-    title: "The Boy, the Mole, the Fox and the Horse",
-    img: "https://images-na.ssl-images-amazon.com/images/I/418D9yYGB3L._AC_SX184_.jpg"
-
-  },
-  {
-    id: 2,
-    author: "Jesica Uribe",
-    title: "Barack Obama",
-    img: "https://images-na.ssl-images-amazon.com/images/I/41L5qgUW2fL._AC_SX184_.jpg"
-  },
-  {
-    id: 3,
-    author: "Brandon Stanton",
-    title: "Humans",
-    img: "https://images-na.ssl-images-amazon.com/images/I/51B-BOBtQtL._AC_SX184_.jpg",
-  },
-  { 
-    id: 4,
-    author: "John Grisham",
-    title: "A Timer For Mercy",
-    img: "https://images-na.ssl-images-amazon.com/images/I/51Q4FT2AIfL._AC_SX184_.jpg"
-  },
-]
 const BookList = () => {
   return(
+  <React.Fragment>
+  <div>
+    <Navbar></Navbar>
+  </div>
   <div className="bookBox">
     <h1>This is a book list</h1>
       {books.map((book) =>{
           //const { author, title, img } = book;
-          return <Book key = {book.id} book = {book}/> //hacer la asginación a book me permite enviar {book} al componente sin tener errores con la deconstrucción
-      })} {/* También podemos usar en estar parte <Book {...book}/> y cambiar en el componente a solo proops*/}
+          return <Book key = {book.id} book = {book}/>    //hacer la asginación a book me permite enviar {book} al componente sin tener errores con la deconstrucción
+      })}                                                 {/* También podemos usar en estar parte <Book {...book}/> y cambiar en el componente a solo proops*/}
   </div>
+  </React.Fragment>
   );
 }
 
-const Book = (proops) => { //tambien se puede usar en lugar de proops la sintaxis ({author, title, img, children})
-  const {title, author, img, children} = proops.book;
-  return(
-    <article className="book">
-      <h1>{title}</h1>
-      <h3>{author}</h3>
-      <img src={img} alt="" />
-    </article>  
-  );
-}; 
+
 
 /* ESTA PARTE TE PERMITIA RENDERIZAR LOS ATIBUTOS DE LOS OBJETOS UNO POR UNO, PERO NECESITAMOS HACER EtoC
 const BookList = () => {

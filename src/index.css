@@ -6,8 +6,8 @@
 
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: rgb(18, 0, 59);
-  background-color: rgb(17, 17, 17);
+  color: #000000;
+  background-color: #000000;
 }
 
 /*
@@ -28,9 +28,9 @@ img {
   margin: 1rem auto;
   display: grid;
   gap: 2rem;
-  background-color: coral;
-  border-style: dotted;
-  border-color: crimson;
+  background-color: #ffe3b3;
+  border-style: groove;
+  border-color: #ffc872;
   padding: 2rem;
 }
 
@@ -41,11 +41,72 @@ img {
 }
 
 .book {
-  background-color: brown;
+  background-color: #b5f1e4;
   border-radius: 1rem;
   padding: 1rem 2rem;
+  border: groove;
+  border-color: brown;
 }
 
 .book h1 {
   margin-top: 0.5rem;
+}
+.navbar {
+  margin: 2rem;
+  border: transparent;
+  background-color: darkslategray;
+  padding: 5px 10px 5px 10px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 19px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+.navbar a:hover {
+  color: #3d5aff;
+  border-bottom: 1px solid currentcolor;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.Book a:hover {
+  color: #3d5aff;
+  border-bottom: 1px solid currentcolor;
+}
+
+.book h1 {
+  text-decoration: underline;
+  color: rgb(7, 1, 61);
+  border-bottom: 1px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+
+button {
+  padding-left: 5px 5px 5px 5px;
+  border-collapse: collapse;
+  background-color: rgb(158, 158, 158);
+  color: chartreuse;
+  border-radius: 3px;
 }
